@@ -1,16 +1,14 @@
 {
     "name": "Wii Shop Theme for itch",
-    "version": "0.1",
+    "version": "0.1.1",
     "description": "Autoplays the Wii Shop theme while browsing itch.io",
     "permissions": [
         "tabs",
         "declarativeContent"
     ],
     "background": {
-        "scripts": [
-            "background.js"
-        ],
-        "persistent": true
+        "service_worker": "background.js",
+        "type": "module"
     },
     "page_action": {
         "default_popup": "popup.html",
@@ -29,5 +27,5 @@
         "128": "images/icon_128.png",
         "256": "images/icon_256.png"
     },
-    "manifest_version": 2
+    "manifest_version": 3
 }
